@@ -100,8 +100,11 @@ export default function Production_table({List, SetaddAnimal,  Setcreated_tag,  
         {/* {List.map((item, index)=><p key={index}>{item.production_type}, {item.tagnumber} {item.quantity} {item.weight} {item.production_cycle} {item.estrus_cycle_end_date}  {item.estrus_cycle_start_date} </p>)} */}
         <tbody className=''>
             {List.length &&List.map((item, index)=>{
+              //  const image = item.image ? item.image:'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
+
                 return <tr key={index} className='flex flex-row items-center justify-center pt-6'>
-                <td className='flex flex-row items-center justify-center pt-6' ><div className='flex flex-row items-center space-x-1 whitespace-nowrap'><p className='text-[8px] sm:text-xs md:text-sm lg:text-[10px] font-semibold'>{item.production_type}</p></div> </td>
+                <td className='flex flex-row items-center justify-center pt-6' >
+                  <div className='flex flex-row items-center space-x-1 whitespace-nowrap'><p className='text-[8px] sm:text-xs md:text-sm lg:text-[10px] font-semibold'>{item.production_type}</p></div> </td>
                 <td className='text-center uppercase font-medium  pt-6 text-[8px] sm:text-xs md:text-sm lg:text-[10px] whitespace-nowrap'>
                  {item.tagnumber}
                 </td>

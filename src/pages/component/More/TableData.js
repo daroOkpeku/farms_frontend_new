@@ -152,10 +152,15 @@ const router = useRouter();
         </thead>
         <tbody className="w-full mt-2">
           {Datax.length > 0 && Datax.map((item, index) => {
-            const cleanedString = item.image?.replace('//uploads', '/uploads') || '';
+            // const cleanedString = item.image?.replace('//uploads', '/uploads') || '';
+            const image = item.image ? item.image:'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
+
             return (
               <tr key={item.id} className="">
                 <td className="flex flex-row items-center justify-center pt-6 text-center">
+                <div className='w-9 h-9  rounded-full'>
+                    <img src={image} alt='img' className='object-cover rounded-full h-full w-full' />
+                  </div>
                   <div className="items-center space-x-1 whitespace-nowrap ">
                     <p className="text-[13px] md:textbase lg:text-base font-semibold">{item.name}</p>
                   </div>

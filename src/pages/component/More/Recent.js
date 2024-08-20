@@ -97,7 +97,8 @@ export default  function Recent({Api_Connect}) {
     <tbody className="">
       {Datal.length > 0 ? (
         Datal.map((item, index) => {
-          const image = item.image ? item.image.replace('//uploads', '/uploads') : cattle;
+          const image = item.image ? item.image:'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
+
           return (
             <Table
               key={index}

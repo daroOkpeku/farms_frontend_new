@@ -110,9 +110,15 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
         </thead>
         <tbody >
             {Data.length > 0&&Data.map((item, index)=>{
+               const image = item.image ? item.image:'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
+
                 return <tr key={index} className='w-full'>
-                <td className='flex flex-row items-center justify-center pt-6' ><div className='flex flex-row items-center space-x-1 whitespace-nowrap'>
-                  {/* <img src={item.feed_mgt.image?item.feed_mgt.image:cattle}  className=' rounded-full' /> */}
+                <td className='flex flex-row items-center justify-center pt-6' >
+                <div className='w-9 h-9  rounded-full'>
+                    <img src={image} alt='img' className='object-cover rounded-full h-full w-full' />
+                  </div>
+                  <div className='flex flex-row items-center space-x-1 whitespace-nowrap'>
+               
                   <p className='text-[13px] sm:text-xs md:text-sm lg:text-sm font-semibold'>{item.feed_mgt.name}</p></div> </td>
                 <td className='text-center uppercase font-medium  pt-6 text-[13px] sm:text-xs md:text-sm lg:text-sm whitespace-nowrap'>
                  {item.feed_mgt.tag_id}
