@@ -24,7 +24,7 @@ export default function Container_record({ SetaddRecord, pdfList, last_page, han
                        containerClassName="w-full border flex flex-row items-center  space-x-2"
                        pageClassName="w-6 w-6 text-xs sm:w-6 sm:w-6 sm:text-xs md:w-8 md:h-8 md:text-sm  lg:w-6 lg:h-6 lg:text-sm grid place-content-center rounded-full bg-[#4C4C4C] text-white hover:bg-blue-500 hover:text-black "
                          pageRangeDisplayed={3}
-                         pageCount={4}
+                         pageCount={last_page}
                          onPageChange={handlePaginate}
                          nextClassName='text-xs sm:text-xs md:text-base lg:text-base'
                          previousClassName='text-xs sm:text-xs md:text-base lg:text-base'
