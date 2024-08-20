@@ -83,15 +83,15 @@ export default  function Recent({Api_Connect}) {
     },[Api_Connect, Datal.length ]);
     
   return (
-  <div className='lg:w-2/3 w-full bg-white p-4 mt-2 px-6  rounded-md  overflow-x-scroll scrollbar  h-72'>
-  <h2 className='font-bold text-lg'>Recent Animals</h2>
+  <div className=' w-full h-52 sm:w-full sm:h-52 md:w-2/3 md:h-72 lg:w-2/3 lg:h-72 bg-white p-4 mt-2 px-6  rounded-md   overflow-y-scroll scrollbar  '>
+  <h2 className='font-bold text-sm sm:text-sm md:text-lg lg:text-lg'>Recent Animals</h2>
   <table className='min-w-full'>
     <thead className=''>
       <tr className='w-full  uppercase text-xs leading-normal'>
-        <th className='text-[#858D9D] text-[13px] md:text-sm lg:text-sm font-medium text-center'>Animal Type</th>
-        <th className='text-[#858D9D] text-[13px] md:text-sm lg:text-sm font-medium text-center'>Unique ID</th>
-        <th className='text-[#858D9D] text-[13px] md:text-sm lg:text-sm font-medium text-center'>Health Status</th>
-        <th className='text-[#858D9D] text-[13px] md:text-sm lg:text-sm font-medium text-center'>Weight</th>
+        <th className='text-[#858D9D] text-[7px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center'>Animal Type</th>
+        <th className='text-[#858D9D] text-[7px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center'>Unique ID</th>
+        <th className='text-[#858D9D] text-[7px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center'>Health Status</th>
+        <th className='text-[#858D9D] text-[7px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center'>Weight</th>
       </tr>
     </thead>
     <tbody className="">

@@ -19,11 +19,11 @@ const [sidebarShow, setSidebarShow] = useState(false);
   }
 
   return (
-   <div className="w-full flex flex-col items-center h-screen fixed">
+   <div className="w-full flex flex-col items-center h-screen fixed overflow-x-scroll scrollbar">
      <Header showing={visibility} isSidebarShowing = {sidebarShow}/>
      <section className="w-full flex flex-row items-center">
       <Siderbar show={sidebarShow}/>
-      <section className="lg:w-[80%] w-full flex justify-center bg-[#ECEEF6]">
+      <section className="lg:w-[80%] w-full flex justify-center bg-[#ECEEF6] ">
       <Inside/>
       </section>
      </section>

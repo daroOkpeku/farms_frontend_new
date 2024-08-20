@@ -105,7 +105,7 @@ const {SetaddAnimal } = created
           </span>
         </section>
 
-        <section className="w-full mt-8  flex flex-col gap-2">
+        <section className="w-full mt-8  flex flex-col gap-2 cursor-pointer">
           {subMenu.map((item, index) => (
           //  <Link href={item.link}  key={index} onClick={()=>Setistitle(item.title)}>
             <div
@@ -120,7 +120,7 @@ const {SetaddAnimal } = created
                   alt="Dashboard"
                 />
               </span>
-              <span onClick={()=>Setistitle(item.title)} className={istitle == item.title?"w-1/2 capitalize  text-[#4066C2]":"w-1/2 capitalize text-black hover:text-[#4066C2]"} >
+              <span onClick={()=>Setistitle(item.title)} className={istitle == item.title?"w-1/2 capitalize  text-[#4066C2] cursor-pointer":"w-1/2 capitalize text-black hover:text-[#4066C2] cursor-pointer"} >
                {item.title}
               </span>
             </div>
@@ -128,7 +128,7 @@ const {SetaddAnimal } = created
           ))}
         </section>
 
-        <section className="w-full mt-12  flex flex-col gap-2">
+        <section className="w-full mt-12  flex flex-col gap-2 cursor-pointer">
         {subMenutwo.map((item, index) => (
             <div
             onClick={()=>handleNextPage(item.link)}
@@ -142,7 +142,7 @@ const {SetaddAnimal } = created
                   alt="Dashboard"
                 />
               </span>
-              <span className={istitle == item.title?"w-1/2 capitalize  text-[#4066C2]":"w-1/2 capitalize text-black hover:text-[#4066C2]"}>
+              <span className={istitle == item.title?"w-1/2 capitalize  text-[#4066C2] cursor-pointer":"w-1/2 capitalize text-black hover:text-[#4066C2] cursor-pointer"}>
                 {item.title}
               </span>
             </div>

@@ -68,7 +68,7 @@ const [last_Page, setlast_Page] = useState(1)
         <section className='w-full flex flex-col items-center'>
             
 
-              <div className='w-full  h-[27rem]  bg-white mt-3 rounded-md'>
+              <div className='w-full  h-[27rem] scrollbar overflow-x-scroll overflow-y-scroll bg-white mt-3 rounded-md'>
              {List.length >0
              ? 
                <Finance_table List={List} Api_Connect={Api_Connect}  SetisHeading={SetisHeading}  Setcreated_tag={Setcreated_tag}  SetaddAnimal={SetaddAnimal}  Setmessage={Setmessage} Setsuccess={Setsuccess}  Setfailure={Setfailure} SetisisProcessing={SetisisProcessing}  />

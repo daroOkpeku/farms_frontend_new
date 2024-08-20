@@ -67,7 +67,7 @@ export default function Production_Containter() {
     return (
         <div className='w-full sm:w-full md:w-[98%] lg:w-[98%] h-screen px-2 py-2'>
         <section className='w-full flex flex-col items-center overflow-y-auto scrollbar'>
-        <div className='w-full  h-[27rem] bg-white  mt-3 rounded-md'>
+        <div className='w-full  h-[27rem] scrollbar overflow-x-scroll overflow-y-scroll bg-white  mt-3 rounded-md'>
           {List.length > 0?
           <Production_table List={List}  SetaddAnimal={SetaddAnimal}  Setcreated_tag={Setcreated_tag}  SetisHeading={SetisHeading}  Setmessage={Setmessage}  Setfailure={Setfailure} SetisisProcessing={SetisisProcessing} Setsuccess={Setsuccess}  />
           :

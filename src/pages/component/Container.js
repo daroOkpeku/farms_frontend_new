@@ -76,7 +76,7 @@ const [last_Page, setlast_Page] = useState(1)
         <div className='w-full sm:w-full md:w-[98%] lg:w-[98%] px-2 py-2'>
         <section className='w-full flex flex-col items-center  h-[35rem] overflow-y-scroll scrollbar'>
             <article className='w-full'>
-                <span className='w-1/5 sm:w-1/5 md:w-[9%] lg:w-[12%] float-right'>
+                <span className='w-1/3 sm:w-1/3 md:w-[9%] lg:w-[12%] float-right'>
                  <button onClick={handleAdd} className='w-full capitalize flex flex-row items-center justify-center space-x-3   bg-[#5570F1] py-2 px-2 text-[9px] sm:text-[9px]  md:text-sm lg:text-sm text-white rounded-md '>
                     <h3>+</h3>   <h3>Add New</h3>
                  </button>

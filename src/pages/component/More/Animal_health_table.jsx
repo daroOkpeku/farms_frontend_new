@@ -99,24 +99,24 @@ export default function Animal_health_table({List, SetaddAnimal,  Setcreated_tag
 
                 return <tr key={index} className=''>
                 <td className='flex flex-row items-center justify-center pt-6' >
-                <div className='w-9 h-9  rounded-full'>
+                <div className='w-6 h-6 sm:w-6 sm:h-6 md:w-9 md:h-9 lg:w-9  lg:h-9  rounded-full'>
                     <img src={image} alt='img' className='object-cover rounded-full h-full w-full' />
                   </div>
-                  <div className='flex flex-row items-center space-x-1 whitespace-nowrap'><p className='text-[8px] sm:text-xs md:text-sm lg:text-[10px] font-semibold'>{item.health_connect.name.substr(0, 50)}</p></div> 
+                  <div className='flex flex-row items-center space-x-1 whitespace-nowrap'><p className='text-[6px] md:textbase lg:text-base font-semibold'>{item.health_connect.name.substr(0, 50)}</p></div> 
                   </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[8px] sm:text-xs md:text-sm lg:text-[10px] whitespace-nowrap'>
+                <td className='text-center uppercase font-medium  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
                  {item.tagnumber.substr(0, 15)}
                 </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[8px] sm:text-xs md:text-sm lg:text-[10px] whitespace-nowrap'>
+                <td className='text-center uppercase font-medium  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
                    {item.illness.substr(0, 10)}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[8px] sm:text-xs md:text-sm lg:text-[10px] whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
                   {item.treatments.substr(0, 10)}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[8px] sm:text-xs md:text-sm lg:text-[10px] whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
                   {item.vaccine_name.substr(0, 10)}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[8px] sm:text-xs md:text-sm lg:text-[10px] whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
                   {item.status.substr(0, 10)}
                 </td>
                 <td className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2  place-content-center whitespace-nowrap pt-6 py-2 '>

@@ -102,9 +102,9 @@ const options = {
   return (
     <div className='bg-white   mt-2 py-2 px-2  '>
        <span className='w-full'>
-       <h2 className='font-bold text-lg'>Gender</h2>
+       <h2 className='font-bold text-sm sm:text-sm md:text-base lg:text-lg'>Gender</h2>
        </span>
-        <div className='w-full mt-5'>
+        <div className='w-full mt-2 sm:mt-2 md:mt-5 lg:mt-5'>
      
         <Doughnut  data={Datax} options={options} />
           </div>

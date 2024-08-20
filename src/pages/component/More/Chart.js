@@ -92,7 +92,7 @@ export default function Chart({Api_Connect}) {
 console.log(data)
   return (
     <div className="w-full flex flex-col bg-white py-2 px-2">
-      <article className="w-full flex flex-row justify-between px-2">
+      <article className="w-full flex flex-row justify-between py-2 px-2">
         <h2 className="capitalize font-semibold text-base">Profit & Revenue</h2>
         <span className="flex flex-row items-center space-x-2 px-2 border">
           <CiCalendar />
