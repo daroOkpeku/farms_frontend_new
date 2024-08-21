@@ -7,9 +7,9 @@ import  Health  from './More/Health'
 import  Productiondata  from './More/Productiondata'
 import { context } from './context';
 import SuccessPop from './More/Success';
-import FailurePop from './More/Failure'
+import Fail from './More/Fail'
 import { name } from 'file-loader';
-export const Add_animal = ({addAnimal, SetaddAnimal, SetisHeading, isHeading, editId}) =>{
+export default function Add_animal  ({addAnimal, SetaddAnimal, SetisHeading, isHeading, editId}) {
 
 const created = useContext(context)
 const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, Setcreated_tag, created_tag,SetisisProcessing } = created
@@ -75,7 +75,7 @@ const changeComp = ()=>{
 }
 
 const handleClear =(text)=>{
-    console.log(tagx)
+    // console.log(tagx)
     if(tagx && Object.keys(tagx).length > 0 && tagx.editx == '' && tagx.tagnumber != ""){
     let object = {'tagnumber':tagx.tagnumber, 'id':tagx.id, 'editx':tagx.editx}
     localStorage.setItem('tagnumber', JSON.stringify(object))
@@ -109,7 +109,7 @@ const handleClear =(text)=>{
 
             </section>
             <SuccessPop  Success={Success}  Setsuccess={Setsuccess}   />
-            <FailurePop  Failure={Failure} Setfailure={Setfailure} />
+            <Fail  Failure={Failure} Setfailure={Setfailure} />
         </div>
     )
 }

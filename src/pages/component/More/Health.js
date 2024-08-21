@@ -3,7 +3,7 @@ import Select from 'react-select'
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa6'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
- const Health = ({  Api_Connect, created_tag, Setsuccess, Success, Setfailure, Failure, Setcreated_tag, Setmessage, SetisisProcessing  }) => {
+export default function Health  ({  Api_Connect, created_tag, Setsuccess, Success, Setfailure, Failure, Setcreated_tag, Setmessage, SetisisProcessing  })  {
   const [vacation_date, SetVacation_date] = useState(new Date())
   const [treatments, Settreatments] = useState("")
   const [treatmentsdate, Settreatmentsdate] = useState(new Date())
@@ -464,4 +464,3 @@ Api_Connect.get("/sanctum/csrf-cookie").then(() => {
   </div></div>
   )
 }
-export default Health;

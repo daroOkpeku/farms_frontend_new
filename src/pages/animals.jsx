@@ -5,11 +5,11 @@ import { context } from "./component/context";
 import Header from "./component/Header";
 import Siderbar from "./component/Siderbar";
 import Container from './component/Container';
-import {Add_animal} from './component/Add_animal';
+import Add_animal from './component/Add_animal';
 import { useRouter } from 'next/router';
 const inter = Inter({ subsets: ["latin"] });
 import Successful from "./component/More/Success";
-import Fail from "./component/More/Failure";
+import Fail from "./component/More/Fail";
 import Processing from './component/More/Processing';
 export default function Animals() {
     const created = useContext(context)

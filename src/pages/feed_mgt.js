@@ -4,9 +4,10 @@ import {useContext , useState, useEffect} from "react"
 import { context } from "./component/context";
 import Header from "./component/Header";
 import Siderbar from "./component/Siderbar";
+// import Container_group from "./component/Container_group";
 import Container_group from "./component/Container_group";
 import Successful from "./component/More/Success";
-import Fail from "./component/More/Failure";
+import Fail from "./component/More/Fail";
 import Processing from './component/More/Processing';
 const inter = Inter({ subsets: ["latin"] });
 

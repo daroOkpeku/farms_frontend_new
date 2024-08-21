@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import { IoMdCloseCircle } from "react-icons/io";
 import { context } from '../context';
-export default function Failure({ Failure, Setfailure }) {
+export default function Fail({ Failure, Setfailure }) {
     const created = useContext(context)
     const {message} = created
    

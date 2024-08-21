@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
- const Financialrecord = ({
+export default function Financialrecord  ({
   Api_Connect,
   created_tag,
   Setsuccess,
@@ -12,7 +12,7 @@ import "react-datepicker/dist/react-datepicker.css";
   Setcreated_tag,
   Setmessage,
   SetisisProcessing
-}) => {
+})  {
   const [cost, Setcost] = useState("");
   const [revenue, Setrevenue] = useState("");
   const [current_value, Setcurrent_value] = useState("");
@@ -430,4 +430,3 @@ import "react-datepicker/dist/react-datepicker.css";
     </div>
   );
 };
-export default Financialrecord;

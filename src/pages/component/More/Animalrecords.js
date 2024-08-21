@@ -1,7 +1,7 @@
 import React, { use, useState, useEffect } from "react";
 import Select from "react-select";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
- const Animalrecords = ({
+export default  function Animalrecords  ({
   Api_Connect,
   Setsuccess,
   Success,
@@ -13,7 +13,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
   editId, 
   SetaddAnimal,
   SetisisProcessing
-}) => {
+}) {
   const [select_Sex, Setselect_Sex] = useState(null);
   const [farmList, SetfarmList] = useState([]);
   const [breedList, SetbreedList] = useState([]);
@@ -515,4 +515,3 @@ console.log(Failure)
     </div>
   );
 };
-export default Animalrecords;

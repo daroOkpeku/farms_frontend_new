@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "./component/Header";
 import Siderbar from "./component/Siderbar";
 import Successful from "./component/More/Success";
-import Fail from "./component/More/Failure";
+import Fail from "./component/More/Fail";
 import Animal_health_Container from './component/More/Animal_health_Container';
 import {useContext,useState, useEffect} from "react"
 import { context } from "./component/context";

@@ -6,7 +6,7 @@ import Header from "./component/Header";
 import Siderbar from "./component/Siderbar";
 import Inside from "./component/Inside";
 import Successful from "./component/More/Success";
-import Fail from "./component/More/Failure";
+import Fail from "./component/More/Fail";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {

@@ -3,7 +3,7 @@ import Select from "react-select";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
- const Feed = ({
+export default function Feed  ({
   Api_Connect,
   created_tag,
   Setsuccess,
@@ -13,7 +13,7 @@ import "react-datepicker/dist/react-datepicker.css";
   Setcreated_tag,
   Setmessage,
   SetisisProcessing
-}) => {
+})  {
   const [select_Sex, Setselect_Sex] = useState(null);
   const [feed, Setfeed] = useState("");
   const [feedlist, Setfeedlist] = useState("");
@@ -614,4 +614,4 @@ import "react-datepicker/dist/react-datepicker.css";
     </div>
   );
 };
-export default Feed;
+

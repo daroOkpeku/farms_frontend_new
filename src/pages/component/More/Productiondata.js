@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { FaArrowRight } from 'react-icons/fa6'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
- const Productiondata = ({ Api_Connect, created_tag, Setsuccess, Success, Setfailure, Failure, Setcreated_tag, Setmessage, SetisisProcessing }) => {
+export default function Productiondata ({ Api_Connect, created_tag, Setsuccess, Success, Setfailure, Failure, Setcreated_tag, Setmessage, SetisisProcessing })  {
 
     const [daily_milk, Setdaily_milk] = useState("")
     // const [weight_gain, Setweight_gain] = useState("")
@@ -455,4 +455,4 @@ const maxDate = new Date();
     )
 }
 
-export default  Productiondata;
+
