@@ -54,7 +54,7 @@ const [tagx, Settagx] = useState(null)
 
 
 useEffect(()=>{
-    var tagxl = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):editId
+    var tagxl = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):editId
     if(tagxl && Object.keys(tagxl).length > 0){
     Setcreated_tag(tagxl.tagnumber) 
     }
@@ -81,7 +81,7 @@ const handleClear =(text)=>{
     // console.log(tagx)
     if(tagx && Object.keys(tagx).length > 0 && tagx.editx == '' && tagx.tagnumber != ""){
     let object = {'tagnumber':tagx.tagnumber, 'id':tagx.id, 'editx':tagx.editx}
-    localStorage.setItem('tagnumber', JSON.stringify(object))
+    window.localStorage.setItem('tagnumber', JSON.stringify(object))
     SetisHeading(text)
     }else{
         Setfailure(true)

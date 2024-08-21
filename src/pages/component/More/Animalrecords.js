@@ -130,7 +130,7 @@ console.log(Failure)
           console.error("Error fetching data:", error);
         });
     });
-    var idxx = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):"";
+    var idxx = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
 
     // animaldetailsget
     if(created_tag && idxx && Object.keys(idxx).length > 0 && idxx.tagnumber != ""){
@@ -201,10 +201,10 @@ console.log(Failure)
             // localStorage.setItem('id', JSON.stringify(res.data.id))
             if(idx && idx.editx){
               let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':'isedit'}
-              localStorage.setItem('tagnumber', JSON.stringify(object))
+              window.localStorage.setItem('tagnumber', JSON.stringify(object))
             }else{
               let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':''}
-              localStorage.setItem('tagnumber', JSON.stringify(object))
+              window.localStorage.setItem('tagnumber', JSON.stringify(object))
             }
 
 
@@ -333,7 +333,7 @@ console.log(Failure)
   const handleBack = (e)=>{
   e.preventDefault();
   SetaddAnimal(false)
-   localStorage.removeItem('tagnumber')
+  window.localStorage.removeItem('tagnumber')
   }
 
   return (
