@@ -49,16 +49,19 @@ const existchange = [
         components:<Financialrecord Api_Connect={Api_Connect} created_tag={created_tag} Setsuccess={Setsuccess} Success={Success} Setfailure={Setfailure} Failure={Failure} Setcreated_tag={Setcreated_tag} Setmessage={Setmessage} SetisisProcessing={SetisisProcessing} />
     }
 ]
-var tagx = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):editId
+
+const [tagx, Settagx] = useState(null)
+
 
 useEffect(()=>{
-    if(tagx && Object.keys(tagx).length > 0){
-    Setcreated_tag(tagx.tagnumber) 
+    var tagxl = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):editId
+    if(tagxl && Object.keys(tagxl).length > 0){
+    Setcreated_tag(tagxl.tagnumber) 
     }
 
-
+    Settagx(tagx)
  
-},[Setcreated_tag, tagx, Setfailure,Setmessage])
+},[Setcreated_tag, tagx, Setfailure,Setmessage, editId])
 
 
 const changeComp = ()=>{
