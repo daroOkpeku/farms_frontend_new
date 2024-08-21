@@ -1,16 +1,16 @@
 import React from 'react'
 import { Inter } from "next/font/google";
 import {useContext,useState, useEffect} from "react"
-import { context } from "./component/context";
-import Header from "./component/Header";
-import Siderbar from "./component/Siderbar";
-import Container_record from './component/Container_record';
-import AddRecord from './component/AddRecord'
+import { context } from "../component/context";
+import Header from "../component/Header";
+import Siderbar from "../component/Siderbar";
+import Container_record from '../component/Container_record';
+import AddRecord from '../component/AddRecord'
 const inter = Inter({ subsets: ["latin"] });
-import Successful from "./component/More/Success";
-import Fail from "./component/More/Fail";
-import Pop_pdf from './component/More/Pop_pdf';
-import Processing from './component/More/Processing';
+import Successful from "../component/More/Success";
+import Fail from "../component/More/Fail";
+import Pop_pdf from '../component/More/Pop_pdf';
+import Processing from '../component/More/Processing';
 export default function Record() {
 
   const created = useContext(context)

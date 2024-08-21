@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from "./component/Header";
-import Siderbar from "./component/Siderbar";
-import Successful from "./component/More/Success";
-import Fail from "./component/More/Fail";
-import Animal_health_Container from './component/More/Animal_health_Container';
+import Header from "../component/Header";
+import Siderbar from "../component/Siderbar";
+import Successful from "../component/More/Success";
+import Fail from "../component/More/Fail";
+import Animal_health_Container from '../component/More/Animal_health_Container';
 import {useContext,useState, useEffect} from "react"
-import { context } from "./component/context";
+import { context } from "../component/context";
 export default function Animal_Health() {
     const created = useContext(context)
     const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal} = created

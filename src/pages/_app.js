@@ -1,8 +1,11 @@
 'use client';
+// import "../styles/globals.css"
 import "../styles/globals.css"
 import Head from "next/head";
-import img from "../pages/image/Logo.png"
-import {Provider} from "./component/context";
+// import img from "../pages/image/Logo.png"
+import img from "../image/Logo.png"
+// import {Provider} from "../component/context";
+import {Provider } from "../component/context"
 export default function App({ Component, pageProps }) {
   return(
     <>

@@ -1,16 +1,16 @@
 import React from 'react'
 import { Inter } from "next/font/google";
 import {useContext,useState, useEffect} from "react"
-import { context } from "./component/context";
-import Header from "./component/Header";
-import Siderbar from "./component/Siderbar";
-import Container from './component/Container';
-import Add_animal from './component/Add_animal';
+import { context } from "../component/context";
+import Header from "../component/Header";
+import Siderbar from "../component/Siderbar";
+import Container from '../component/Container';
+import Add_animal from '../component/Add_animal';
 import { useRouter } from 'next/router';
 const inter = Inter({ subsets: ["latin"] });
-import Successful from "./component/More/Success";
-import Fail from "./component/More/Fail";
-import Processing from './component/More/Processing';
+import Successful from "../component/More/Success";
+import Fail from "../component/More/Fail";
+import Processing from '../component/More/Processing';
 export default function Animals() {
     const created = useContext(context)
     const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal, SetisisProcessing, isProcessing} = created

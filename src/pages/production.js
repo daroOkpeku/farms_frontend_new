@@ -1,12 +1,12 @@
 import React from 'react';
-import Header from "./component/Header";
-import Siderbar from "./component/Siderbar";
-import Successful from "./component/More/Success";
-import Fail from "./component/More/Fail";
+import Header from "../component/Header";
+import Siderbar from "../component/Siderbar";
+import Successful from "../component/More/Success";
+import Fail from "../component/More/Fail";
 import {useContext,useState, useEffect} from "react"
-import { context } from "./component/context";
-import Production_Containter from './component/More/Production_Containter';
-import Processing from './component/More/Processing';
+import { context } from "../component/context";
+import Production_Containter from '../component/More/Production_Containter';
+import Processing from '../component/More/Processing';
 export default function Production() {
     const created = useContext(context)
     const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal, isProcessing} = created

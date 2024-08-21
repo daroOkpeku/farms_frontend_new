@@ -1,12 +1,12 @@
-import Container_finance from './component/Container_finance';
+import Container_finance from '../component/Container_finance';
 import { Inter } from "next/font/google";
 import {useContext , useState, useEffect} from "react"
-import { context } from "./component/context";
-import Header from "./component/Header";
-import Siderbar from "./component/Siderbar";
-import Successful from "./component/More/Success";
-import Fail from "./component/More/Fail";
-import Processing from './component/More/Processing';
+import { context } from "../component/context";
+import Header from "../component/Header";
+import Siderbar from "../component/Siderbar";
+import Successful from "../component/More/Success";
+import Fail from "../component/More/Fail";
+import Processing from '../component/More/Processing';
 const inter = Inter({ subsets: ["latin"] });
 
 

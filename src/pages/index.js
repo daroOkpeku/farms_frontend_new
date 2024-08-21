@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import {useContext , useState} from "react"
-import { context } from "./component/context";
-import Header from "./component/Header";
-import Siderbar from "./component/Siderbar";
-import Inside from "./component/Inside";
-import Successful from "./component/More/Success";
-import Fail from "./component/More/Fail";
+import { context } from "../component/context";
+import Header from "../component/Header";
+import Siderbar from "../component/Siderbar";
+import Inside from "../component/Inside";
+import Successful from "../component/More/Success";
+import Fail from "../component/More/Fail";
+
+// import {context} from "../component/context"
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
