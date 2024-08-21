@@ -68,7 +68,7 @@ export default function Feed  ({
       color: "#a0aec0",
     }),
   };
- var uid = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):"";
+ var uid = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
   useEffect(() => {
     let headers = {
       "Content-Type": "application/json",
@@ -154,7 +154,7 @@ export default function Feed  ({
     });
 
 
-    var idx = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):"";
+    var idx = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
     // let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':''}
     // localStorage.setItem('tagnumber', JSON.stringify(object))
     if(created_tag && idx && Object.keys(idx).length > 0 && idx.id){
@@ -242,10 +242,10 @@ export default function Feed  ({
               // localStorage.setItem('id', JSON.stringify(res.data.id))
               if(idx && idx.editx){
                 let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':'isedit'}
-                localStorage.setItem('tagnumber', JSON.stringify(object))
+                window.localStorage.setItem('tagnumber', JSON.stringify(object))
               }else{
                 let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':''}
-                localStorage.setItem('tagnumber', JSON.stringify(object))
+                window.localStorage.setItem('tagnumber', JSON.stringify(object))
               }
           }else if(res.data.error){
             Setfailure(true);

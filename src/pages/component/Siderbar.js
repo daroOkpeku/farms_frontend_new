@@ -69,7 +69,7 @@ const {SetaddAnimal } = created
 
     const handleNextPage = (page)=>{
       let object = {'tagnumber':'', 'id':'', 'editx':''}
-      localStorage.setItem('tagnumber', JSON.stringify(object))
+      window.localStorage.setItem('tagnumber', JSON.stringify(object))
       SetaddAnimal(false)
       setTimeout(()=>{
         router.replace({

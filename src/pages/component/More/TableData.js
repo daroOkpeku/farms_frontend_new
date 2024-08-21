@@ -17,7 +17,7 @@ const router = useRouter();
     SetEditId(id)
     SetaddAnimal(true)
     let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
-    localStorage.setItem('tagnumber', JSON.stringify(object))
+   window. localStorage.setItem('tagnumber', JSON.stringify(object))
     // localStorage.setItem('id', JSON.stringify(uid))
     // localStorage.setItem('editx', 'isedit')
   }

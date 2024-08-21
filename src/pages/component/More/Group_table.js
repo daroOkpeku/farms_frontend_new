@@ -17,7 +17,7 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
     // localStorage.setItem('id', JSON.stringify(uid))
     // localStorage.setItem('editx', 'isedit')
     let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
-    localStorage.setItem('tagnumber', JSON.stringify(object))
+    window.localStorage.setItem('tagnumber', JSON.stringify(object))
     SetisHeading('Feed Management')
     SetaddAnimal(true)
    setTimeout(()=>{

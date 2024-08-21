@@ -51,7 +51,7 @@ export default function Health  ({  Api_Connect, created_tag, Setsuccess, Succes
     }),
   };
 
-  var idx =  localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):"";
+  var idx = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
 
   useEffect(()=>{
     let headers = {
@@ -76,7 +76,7 @@ export default function Health  ({  Api_Connect, created_tag, Setsuccess, Succes
 
     })
 //  healthlist
-var idxx = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):"";
+var idxx = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
 
 if(created_tag & idxx && Object.keys(idxx).length > 0){
   let urlv = "healthlist";
@@ -140,10 +140,10 @@ Api_Connect.get("/sanctum/csrf-cookie").then(() => {
           // localStorage.setItem('id', JSON.stringify(res.data.id))
           if(idx && idx.editx){
             let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':'isedit'}
-            localStorage.setItem('tagnumber', JSON.stringify(object))
+            window.localStorage.setItem('tagnumber', JSON.stringify(object))
           }else{
             let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':''}
-            localStorage.setItem('tagnumber', JSON.stringify(object))
+           window.localStorage.setItem('tagnumber', JSON.stringify(object))
           }
           }else if(res.data.error){
             Setfailure(true);
@@ -238,7 +238,7 @@ Api_Connect.get("/sanctum/csrf-cookie").then(() => {
           SetisisProcessing(false)
           Setmessage(res.data.success);
           Setcreated_tag(res.data.tagnumber)
-          localStorage.setItem('tagnumber', JSON.stringify(res.data.tagnumber))
+          // localStorage.setItem('tagnumber', JSON.stringify(res.data.tagnumber))
           }else if(res.data.error){
             Setfailure(true);
             SetisisProcessing(false)

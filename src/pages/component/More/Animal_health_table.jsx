@@ -11,7 +11,7 @@ export default function Animal_health_table({List, SetaddAnimal,  Setcreated_tag
         // localStorage.setItem('tagnumber', JSON.stringify(id))
         // localStorage.setItem('id', JSON.stringify(uid))
         let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
-        localStorage.setItem('tagnumber', JSON.stringify(object))
+       window.localStorage.setItem('tagnumber', JSON.stringify(object))
         SetisHeading('Health & Veterinary')
         SetaddAnimal(true)
        setTimeout(()=>{

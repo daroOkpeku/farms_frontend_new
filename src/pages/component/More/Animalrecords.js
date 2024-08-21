@@ -89,7 +89,7 @@ console.log(Failure)
     }),
   };
 
-  var idx = localStorage.getItem('tagnumber')?JSON.parse(localStorage.getItem('tagnumber')):"";
+  var idx = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
   useEffect(() => {
     let headers = {
       "Content-Type": "application/json",

@@ -57,7 +57,7 @@ export default function Finance_table({List, Api_Connect,  SetisHeading,  Setcre
         // localStorage.setItem('id', JSON.stringify(uid))
         // localStorage.setItem('editx', 'isedit')
         let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
-        localStorage.setItem('tagnumber', JSON.stringify(object))
+        window.localStorage.setItem('tagnumber', JSON.stringify(object))
         SetisHeading('Financial Record')
         SetaddAnimal(true)
        setTimeout(()=>{
