@@ -26,14 +26,15 @@ const [last_Page, setlast_Page] = useState(1)
         Setlist(res.data.success.data)
         setlast_Page(res.data.success.last_page)
         // Setloadpop(false)
+        const timer = setTimeout(()=>{
+          Setloadpop(false)
+         },3500)
       }
     })
 
   })
   // Setloadpop(true)
-  const timer = setTimeout(()=>{
-    Setloadpop(false)
-   },3500)
+
   //  return () => clearTimeout(timer);
   },[Api_Connect, Setloadpop])
 

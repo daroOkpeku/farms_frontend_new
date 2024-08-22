@@ -43,13 +43,14 @@ export default function Record() {
                 // Setloadpop(false)
                 SetpdfList(res.data.success.data)
                 Setlast_page(res.data.success.last_pag)
+                const timer = setTimeout(()=>{
+                  Setloadpop(false)
+                 },3500)
               }
             })
           })
       
-          const timer = setTimeout(()=>{
-            Setloadpop(false)
-           },3500)
+         
       },[Api_Connect, Setloadpop])
 
 

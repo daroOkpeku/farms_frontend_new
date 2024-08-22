@@ -57,14 +57,15 @@ export default function Production_Containter() {
             Setlist(res.data.success.data)
             setlast_Page(res.data.success.last_page)
             // Setloadpop(false)
+            const timer = setTimeout(()=>{
+              Setloadpop(false)
+             },3500)
           }
         })
     
       })
 
-      const timer = setTimeout(()=>{
-        Setloadpop(false)
-       },3500)
+    
     
     
       },[Api_Connect, Setloadpop])

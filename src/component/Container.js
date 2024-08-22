@@ -25,6 +25,10 @@ const [last_Page, setlast_Page] = useState(1)
                     setlast_Page(res.data.meta.last_page)
                     // Setloadpop(false)
                           // Setloadpop(true)
+
+                          const timer = setTimeout(()=>{
+                            Setloadpop(Loadpop=>false)
+                        },3500)
                
                   }
                     
@@ -36,9 +40,7 @@ const [last_Page, setlast_Page] = useState(1)
             console.error('Error fetching CSRF cookie:', error);
         });
      
-       const timer = setTimeout(()=>{
-            Setloadpop(Loadpop=>false)
-        },3500)
+    
         
       
    
