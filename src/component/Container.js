@@ -4,13 +4,13 @@ import TableData from './More/TableData';
 import ReactPaginate from 'react-paginate';
 
 
-export default function Container({SetaddAnimal, Api_Connect, Setsuccess, Setmessage, SetEditId, Setfailure, SetisHeading, SetisisProcessing}) {
+export default function Container({SetaddAnimal, Api_Connect, Setsuccess, Setmessage, SetEditId, Setfailure, SetisHeading, SetisisProcessing, Setloadpop, Loadpop}) {
     
 const [Datax, setDatax] = useState([])
 const [last_Page, setlast_Page] = useState(1)
 
     useEffect(()=>{
-     
+        // Setloadpop(true)
         let headers = {
             'Content-Type': 'application/json',
              'Accept': 'application/json',
@@ -23,8 +23,9 @@ const [last_Page, setlast_Page] = useState(1)
                     
                     setDatax(res.data.data)
                     setlast_Page(res.data.meta.last_page)
-    
-    
+                    // Setloadpop(false)
+                          // Setloadpop(true)
+               
                   }
                     
                 })
@@ -34,8 +35,16 @@ const [last_Page, setlast_Page] = useState(1)
         }).catch(error => {
             console.error('Error fetching CSRF cookie:', error);
         });
+     
+       const timer = setTimeout(()=>{
+            Setloadpop(Loadpop=>false)
+        },3500)
+        
+      
+   
+        //    return () => clearTimeout(timer);
     
-    },[Api_Connect, setDatax]);
+    },[Api_Connect, setDatax, Setloadpop]);
 
     const handlePaginate =(ans)=>{
         let Answer = ans.selected + 1;

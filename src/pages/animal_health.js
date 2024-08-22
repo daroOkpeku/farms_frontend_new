@@ -6,6 +6,7 @@ import Fail from "../component/More/Fail";
 import Animal_health_Container from '../component/More/Animal_health_Container';
 import {useContext,useState, useEffect} from "react"
 import { context } from "../component/context";
+import Loader from "../component/More/Loader"
 export default function Animal_Health() {
     const created = useContext(context)
     const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal} = created
@@ -27,7 +28,7 @@ const [editId, SetEditId] = useState(null)
             </section>
             <Fail Failure={Failure} Setfailure={Setfailure}/>
         <Successful Success={Success} Setsuccess={Setsuccess} message={message} />
-
+         <Loader/>
             
         </div>
     )

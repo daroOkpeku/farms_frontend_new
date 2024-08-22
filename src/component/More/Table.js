@@ -3,10 +3,10 @@ import cattle from '../../image/cow.png'
 import Image from 'next/image';
 
 export default function Table(props) {
-  const {key, img, animal, unique, age, weight} = props
+  const { img, animal, unique, age, weight} = props
   // <Image src={img}  alt='cow' className=' rounded-full  mt-2' />
   return (
-  <tr key={key} className=''>
+  <tr  className=''>
                 <td className='flex flex-row items-center'><div className='flex flex-row items-center space-x-1'>
                   <div className='w-4 h-4 sm:w-4 sm:h-4 md:w-9 md:h-9 lg:w-9 lg:h-9  rounded-full'>
                     <img src={img} alt='img' className='object-cover rounded-full h-full w-full' />

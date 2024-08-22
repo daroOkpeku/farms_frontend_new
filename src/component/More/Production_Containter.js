@@ -6,7 +6,7 @@ import Production_table from './Production_table';
 
 export default function Production_Containter() {
     const created = useContext(context)
-    const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing} = created
+    const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop} = created
 
     const [List, Setlist] = useState([])
     const [last_Page, setlast_Page] = useState(1)
@@ -24,10 +24,10 @@ export default function Production_Containter() {
                     .then(res => {
                         // console.log(res)
                       if(res.data.success){
-                        
+                       
                         Setlist(res.data.success.data)
                         setlast_Page(res.data.success.last_page)
-        
+                       
         
                       }
                         
@@ -56,13 +56,18 @@ export default function Production_Containter() {
           if(res.data.success){
             Setlist(res.data.success.data)
             setlast_Page(res.data.success.last_page)
+            // Setloadpop(false)
           }
         })
     
       })
+
+      const timer = setTimeout(()=>{
+        Setloadpop(false)
+       },3500)
     
     
-      },[Api_Connect])
+      },[Api_Connect, Setloadpop])
 
     return (
         <div className='w-full sm:w-full md:w-[98%] lg:w-[98%] h-screen px-2 py-2'>

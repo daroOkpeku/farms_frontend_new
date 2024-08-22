@@ -7,6 +7,7 @@ import {useContext,useState, useEffect} from "react"
 import { context } from "../component/context";
 import Production_Containter from '../component/More/Production_Containter';
 import Processing from '../component/More/Processing';
+import Loader from '../component/More/Loader';
 export default function Production() {
     const created = useContext(context)
     const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal, isProcessing} = created
@@ -28,6 +29,7 @@ export default function Production() {
         <Processing  isProcessing={isProcessing} />
         <Fail Failure={Failure} Setfailure={Setfailure}/>
         <Successful Success={Success} Setsuccess={Setsuccess} message={message} />
+        <Loader/>
       </div>
     );
 }

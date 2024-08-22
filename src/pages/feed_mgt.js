@@ -9,11 +9,12 @@ import Container_group from "../component/Container_group";
 import Successful from "../component/More/Success";
 import Fail from "../component/More/Fail";
 import Processing from '../component/More/Processing';
+import Loader from "../component/More/Loader";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Feed_Mgt() {
   const created = useContext(context)
-  const {Success, Setsuccess, Failure, Setfailure, Api_Connect, SetisisProcessing, isProcessing} = created
+  const {Success, Setsuccess, Failure, Setfailure, Api_Connect, SetisisProcessing, isProcessing, Setloadpop} = created
 const [sidebarShow, setSidebarShow] = useState(false);
 const [Data, SetData] = useState([])
 const [last_page, Setlast_page] = useState(0)
@@ -32,15 +33,22 @@ const [last_page, Setlast_page] = useState(0)
       Api_Connect.get(`/api/${url}`, { headers }).then((res) => {
         if(res.data.success){
           // console.log(res.data.success.data)
+          // Setloadpop(false)
           SetData(res.data.success.data)
           Setlast_page(res.data.success.last_page)
+              // Setloadpop(true)
+          const timer = setTimeout(()=>{
+            Setloadpop(false)
+          },3500)
         }
 
       })
 
     })
 
-  },[Api_Connect])
+    //  return () => clearTimeout(timer);
+
+  },[Api_Connect, Setloadpop])
 
 
 
@@ -56,6 +64,7 @@ const [last_page, Setlast_page] = useState(0)
      <Processing  isProcessing={isProcessing}/>
      <Fail Failure={Failure} Setfailure={Setfailure}/>
      <Successful Success={Success} Setsuccess={Setsuccess} />
+     <Loader/>
    </div>
     )
 }

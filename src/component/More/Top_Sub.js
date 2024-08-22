@@ -2,13 +2,13 @@ import React,{useContext , useState, useEffect} from 'react'
 import { FaArrowTrendUp, FaArrowTrendDown} from "react-icons/fa6";
 
 import axios from 'axios'
-export default function Top_Sub({Api_Connect}) {
+export default function Top_Sub({Api_Connect, Setloadpop}) {
 
  const [topSub, setTopSub] = useState([])
 
 
    useEffect(()=>{
-
+    //  Setloadpop(true)
       let headers = {
          'Content-Type': 'application/json',
           'Accept': 'application/json',
@@ -19,6 +19,10 @@ export default function Top_Sub({Api_Connect}) {
              .then(res => {
                if(res.data.success){
                   setTopSub(res.data.success)
+                   //  Setloadpop(true)
+                const timer = setTimeout(()=>{
+                  Setloadpop(false)
+                },3500)
                }
                  
              })
@@ -28,8 +32,9 @@ export default function Top_Sub({Api_Connect}) {
      }).catch(error => {
          console.error('Error fetching CSRF cookie:', error);
      });
-
-   },[Api_Connect])
+   
+    //  return () => clearTimeout(timer);
+   },[Api_Connect, Setloadpop])
     
 
 

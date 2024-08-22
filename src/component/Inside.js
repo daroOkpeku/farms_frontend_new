@@ -7,12 +7,12 @@ import { context } from './context';
 export default function Inside() {
 
     const created = useContext(context)
-    const {Api_Connect} = created;
+    const {Api_Connect, Setloadpop} = created;
 
     return (
         <div className='w-[98%] py-2 '>
            <section className='w-full flex flex-col items-center h-[36rem] sm:h-[36rem]  md:h-[35rem]  lg:h-[35rem] overflow-y-scroll scrollbar'>
-                 <Top_Sub Api_Connect={Api_Connect} />
+                 <Top_Sub Api_Connect={Api_Connect} Setloadpop={Setloadpop} />
                  <Chart Api_Connect={Api_Connect} />
                  <div className='w-full flex lg:flex-row  justify-between flex-col  '>
                  <Recent  Api_Connect={Api_Connect} />

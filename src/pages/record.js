@@ -11,10 +11,11 @@ import Successful from "../component/More/Success";
 import Fail from "../component/More/Fail";
 import Pop_pdf from '../component/More/Pop_pdf';
 import Processing from '../component/More/Processing';
+import Loader from '../component/More/Loader';
 export default function Record() {
 
   const created = useContext(context)
-  const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal, PDFlink, ispdf, Setispdf, isProcessing} = created
+  const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal, PDFlink, ispdf, Setispdf, isProcessing, Setloadpop} = created
 
 
 
@@ -39,13 +40,17 @@ export default function Record() {
             .then((res) => {
               console.log(res.data.success)
               if (res.data.success) {
+                // Setloadpop(false)
                 SetpdfList(res.data.success.data)
                 Setlast_page(res.data.success.last_pag)
               }
             })
           })
       
-      },[Api_Connect, ])
+          const timer = setTimeout(()=>{
+            Setloadpop(false)
+           },3500)
+      },[Api_Connect, Setloadpop])
 
 
       
@@ -89,7 +94,9 @@ export default function Record() {
              {addRecord?
                <AddRecord SetaddRecord={SetaddRecord}/>
              :
+             pdfList.length > 0?
              <Container_record SetaddRecord={SetaddRecord}  pdfList={pdfList}  last_page={last_page} handlePaginate={handlePaginate} />
+             :""
              }
              
          </section>
@@ -99,6 +106,7 @@ export default function Record() {
         <Processing  isProcessing={isProcessing} />
         <Fail Failure={Failure} Setfailure={Setfailure}/>
         <Successful Success={Success} Setsuccess={Setsuccess} message={message} />
+        <Loader/>
       </div>
     )
 }

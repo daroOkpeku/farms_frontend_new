@@ -73,7 +73,7 @@ export default function Chart({Api_Connect}) {
    Api_Connect.get('/sanctum/csrf-cookie').then(() => {
        Api_Connect.get(`/api/${url}`, { headers })
            .then(res => {
-            console.log(res)
+            // console.log(res)
              if(res.data.success){
               setData(res.data.success)
              }
@@ -89,7 +89,7 @@ export default function Chart({Api_Connect}) {
  },[Api_Connect])
 
   
-console.log(data)
+// console.log(data)
   return (
     <div className="w-full flex flex-col bg-white py-2 px-2">
       <article className="w-full flex flex-row justify-between py-2 px-2">

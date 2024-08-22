@@ -101,6 +101,7 @@ export default  function Recent({Api_Connect}) {
 
           return (
             <Table
+          
               key={index}
               img={image}
               animal={item.name}

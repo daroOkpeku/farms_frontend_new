@@ -5,7 +5,7 @@ import Animal_health_table from './Animal_health_table';
 import ReactPaginate from 'react-paginate';
 export default function Animal_health_Container() {
     const created = useContext(context)
-    const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing} = created
+    const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop} = created
   
     const [List, Setlist] = useState([])
     const [last_Page, setlast_Page] = useState(1)
@@ -25,7 +25,7 @@ export default function Animal_health_Container() {
                         
                         Setlist(res.data.success.data)
                         setlast_Page(res.data.success.last_page)
-        
+                        
         
                       }
                         
@@ -53,13 +53,17 @@ export default function Animal_health_Container() {
           if(res.data.success){
             Setlist(res.data.success.data)
             setlast_Page(res.data.success.last_page)
+            // Setloadpop(false)
           }
         })
     
       })
+  
+      const timer = setTimeout(()=>{
+        Setloadpop(false)
+       },3500)
     
-    
-      },[Api_Connect])
+      },[Api_Connect, Setloadpop])
     
     return (
         <div className='w-full sm:w-full md:w-[98%] lg:w-[98%] h-screen px-2 py-2'>

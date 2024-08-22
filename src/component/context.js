@@ -12,6 +12,7 @@ export default function Provider({children}){
     const [PDFlink, SetPDFlink] = useState("")
     const [ispdf, Setispdf] = useState(false)
     const [isProcessing, SetisisProcessing] = useState(false)
+    const [Loadpop, Setloadpop] = useState(true)
       const Api_Connect = axios.create({
       baseURL:'https://api.ranchidpro.com',
       // 'https://api.ranchidpro.com',
@@ -24,6 +25,7 @@ export default function Provider({children}){
       },2500)
     }
    },[Failure, Success])
+  //  console.log(Loadpop)
     return(
         <context.Provider 
         value={{ 
@@ -46,7 +48,9 @@ export default function Provider({children}){
             Setispdf:Setispdf,
             ispdf:ispdf,
             SetisisProcessing:SetisisProcessing,
-            isProcessing:isProcessing
+            isProcessing:isProcessing,
+            Loadpop:Loadpop,
+            Setloadpop:Setloadpop
          }}
         >
         {children}

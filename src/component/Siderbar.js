@@ -20,7 +20,7 @@ const [istitle, Setistitle] = useState('dashboard')
 const router = useRouter();
 
 const created = useContext(context)
-const {SetaddAnimal } = created
+const {SetaddAnimal,  Setloadpop } = created
 
 
     const subMenu = [
@@ -67,11 +67,15 @@ const {SetaddAnimal } = created
     // ${show?'block':'hidden'}
     // 
 
-    const handleNextPage = (page)=>{
+    const handleNextPage = (page, title)=>{
+      Setloadpop(true)
       let object = {'tagnumber':'', 'id':'', 'editx':''}
       window.localStorage.setItem('tagnumber', JSON.stringify(object))
       SetaddAnimal(false)
+      
+      Setistitle(title)
       setTimeout(()=>{
+      
         router.replace({
           pathname:page,
       })
@@ -110,17 +114,17 @@ const {SetaddAnimal } = created
           //  <Link href={item.link}  key={index} onClick={()=>Setistitle(item.title)}>
             <div
              key={index} 
-              onClick={()=>handleNextPage(item.link)}
+              onClick={()=>handleNextPage(item.link, item.title)}
               className={istitle == item.title?"border-l-2 border-[#4066C2] bg-[#F8F8F8] flex flex-row items-center justify-center space-x-2 p-1":"hover:border-l-2 hover:border-[#4066C2] hover:bg-[#F8F8F8] flex flex-row items-center justify-center space-x-2 p-1 cursor-pointer"}
             >
-              <span className="w-6 h-6 cursor-pointer" onClick={()=>Setistitle(item.title)}>
+              <span className="w-6 h-6 cursor-pointer" onClick={()=>handleNextPage(item.link, item.title)}>
                 <Image
                   src={item.image}
                   className="w-full h-full cursor-pointer"
                   alt="Dashboard"
                 />
               </span>
-              <span onClick={()=>Setistitle(item.title)} className={istitle == item.title?"w-1/2 capitalize  text-[#4066C2] cursor-pointer":"w-1/2 capitalize text-black hover:text-[#4066C2] cursor-pointer"} >
+              <span onClick={()=>handleNextPage(item.link, item.title)} className={istitle == item.title?"w-1/2 capitalize  text-[#4066C2] cursor-pointer":"w-1/2 capitalize text-black hover:text-[#4066C2] cursor-pointer"} >
                {item.title}
               </span>
             </div>
@@ -131,11 +135,11 @@ const {SetaddAnimal } = created
         <section className="w-full mt-12  flex flex-col gap-2 cursor-pointer">
         {subMenutwo.map((item, index) => (
             <div
-            onClick={()=>handleNextPage(item.link)}
+            onClick={()=>handleNextPage(item.link, item.title)}
               key={index}
               className="hover:border-l-2 hover:border-[#4066C2] hover:bg-[#F8F8F8] flex flex-row items-center justify-center space-x-2 p-1 cursor-pointer"
             >
-              <span className="w-6 h-6" onClick={()=>Setistitle(item.title)}>
+              <span className="w-6 h-6" onClick={()=>handleNextPage(item.link, item.title)}>
                 <Image
                   src={item.image}
                   className="w-full h-full"

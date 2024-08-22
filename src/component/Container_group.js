@@ -50,7 +50,7 @@ export default function Container_group({Data,  last_page, SetData,  Setlast_pag
               }
               </div>
               <div className='w-full mt-1 px-2'>
-                     <article classNam="w-[40%] border  float-left">
+                     <article className="w-[40%] border  float-left">
                          <ReactPaginate
                          containerClassName="w-full border flex flex-row items-center  space-x-2"
                          pageClassName="w-6 w-6 text-xs sm:w-6 sm:w-6 sm:text-xs md:w-8 md:h-8 md:text-sm  lg:w-6 lg:h-6 lg:text-sm grid place-content-center rounded-full bg-[#4C4C4C] text-white hover:bg-blue-500 hover:text-black "

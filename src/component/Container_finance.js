@@ -5,7 +5,7 @@ import {useContext , useState, useEffect} from "react"
 import { context } from './context';
 export default function Container_finance() {
   const created = useContext(context)
-  const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing} = created
+  const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop} = created
 const [List, Setlist] = useState([])
 const [last_Page, setlast_Page] = useState(1)
 
@@ -22,15 +22,20 @@ const [last_Page, setlast_Page] = useState(1)
     Api_Connect.get(`/api/${url}`, { headers })
     .then(res => {
       if(res.data.success){
+       
         Setlist(res.data.success.data)
         setlast_Page(res.data.success.last_page)
+        // Setloadpop(false)
       }
     })
 
   })
-
-
-  },[Api_Connect])
+  // Setloadpop(true)
+  const timer = setTimeout(()=>{
+    Setloadpop(false)
+   },3500)
+  //  return () => clearTimeout(timer);
+  },[Api_Connect, Setloadpop])
 
   
   const handlePaginate =(ans)=>{
@@ -77,7 +82,7 @@ const [last_Page, setlast_Page] = useState(1)
               }
               </div>
               <div className='w-full mt-1 px-2'>
-                     <article classNam="w-[40%] border  float-left">
+                     <article className="w-[40%] border  float-left">
                          <ReactPaginate
                          containerClassName="w-full border flex flex-row items-center  space-x-2"
                          pageClassName="w-6 w-6 text-xs sm:w-6 sm:w-6 sm:text-xs md:w-8 md:h-8 md:text-sm  lg:w-6 lg:h-6 lg:text-sm grid place-content-center rounded-full bg-[#4C4C4C] text-white hover:bg-blue-500 hover:text-black "

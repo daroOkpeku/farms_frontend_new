@@ -7,6 +7,7 @@ import Siderbar from "../component/Siderbar";
 import Successful from "../component/More/Success";
 import Fail from "../component/More/Fail";
 import Processing from '../component/More/Processing';
+import Loader from "../component/More/Loader"
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -37,6 +38,7 @@ export default function Finance() {
     <Processing  isProcessing={isProcessing}/>
     <Fail Failure={Failure} Setfailure={Setfailure}/>
      <Successful Success={Success} Setsuccess={Setsuccess} />
+     <Loader/>
   </div>
     
   )
