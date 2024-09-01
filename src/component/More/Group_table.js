@@ -110,7 +110,7 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
         </thead>
         <tbody >
             {Data.length > 0&&Data.map((item, index)=>{
-               const image = item.image ? item.image:'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
+               const image = item.image ? item.image.replace('//uploads', '/uploads'):'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
 
                 return <tr key={index} className='w-full'>
                 <td className='flex flex-row items-center justify-center pt-6' >

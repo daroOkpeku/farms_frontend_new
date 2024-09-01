@@ -153,7 +153,7 @@ const router = useRouter();
         <tbody className="w-full mt-2">
           {Datax.length > 0 && Datax.map((item, index) => {
             // const cleanedString = item.image?.replace('//uploads', '/uploads') || '';
-            const image = item.image ? item.image:'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
+            const image = item.image ? item.image.replace('//uploads', '/uploads'):'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
 
             return (
               <tr key={item.id} className="">

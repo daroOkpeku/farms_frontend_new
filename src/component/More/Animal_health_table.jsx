@@ -95,7 +95,7 @@ export default function Animal_health_table({List, SetaddAnimal,  Setcreated_tag
         {/* {List.map((item, index)=><p key={index}>{item.health_connect.name}, {item.tagnumber} {item.illness} {item.treatments} {item.vaccine_name} {item.status} </p>)} */}
         <tbody >
             {List.length && List.map((item, index)=>{
-                  const image = item.image ? item.image:'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
+                  const image = item.image ? item.image.replace('//uploads', '/uploads'):'https://ik.imagekit.io/9nikkw38wtz/no-pictures_fXzzro9jj.png?updatedAt=1724149999774';
 
                 return <tr key={index} className=''>
                 <td className='flex flex-row items-center justify-center pt-6' >
