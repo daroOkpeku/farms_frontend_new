@@ -3,7 +3,7 @@ import cattle from '../../image/cow.png'
 import { MdDelete } from "react-icons/md";
 import { MdModeEditOutline } from "react-icons/md";
 import { useRouter } from 'next/router';
-export default function Animal_health_table({List, SetaddAnimal,  Setcreated_tag,  SetisHeading,  Setmessage,  Setfailure, Api_Connect, SetisisProcessing, Setsuccess}) {
+export default function Animal_health_table({List, SetaddAnimal,  Setcreated_tag,  SetisHeading,  Setmessage,  Setfailure, Api_Connect, SetisisProcessing, Setsuccess,  SetClickonanilmal}) {
     const router = useRouter();
 
     const handleEdit =(id, uid)=>{
@@ -13,6 +13,7 @@ export default function Animal_health_table({List, SetaddAnimal,  Setcreated_tag
         let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
        window.localStorage.setItem('tagnumber', JSON.stringify(object))
         SetisHeading('Health & Veterinary')
+        SetClickonanilmal(false)
         SetaddAnimal(true)
        setTimeout(()=>{
         router.replace({

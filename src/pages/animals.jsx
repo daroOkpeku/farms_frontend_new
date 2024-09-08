@@ -14,7 +14,7 @@ import Processing from '../component/More/Processing';
 import Loader from '../component/More/Loader';
 export default function Animals() {
     const created = useContext(context)
-    const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal, SetisisProcessing, isProcessing, Setloadpop, Loadpop} = created
+    const {Success, Setsuccess, Failure, Setfailure, Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal, SetisisProcessing, isProcessing, Setloadpop, Loadpop, SetClickonanilmal, Cliconanimal} = created
 const [sidebarShow, setSidebarShow] = useState(false);
 // const [addAnimal, SetaddAnimal] = useState(false)
 // const [isHeading, SetisHeading] = useState("Animal Records")
@@ -39,9 +39,9 @@ const [editId, SetEditId] = useState(null)
          <section className="w-full lg:w-[80%]  flex justify-center bg-[#ECEEF6]">
           { addAnimal ?
           
-           <Add_animal addAnimal={addAnimal} SetaddAnimal={SetaddAnimal}  SetisHeading={SetisHeading}  isHeading={isHeading} editId={editId} /> 
+           <Add_animal addAnimal={addAnimal} SetaddAnimal={SetaddAnimal}  SetisHeading={SetisHeading}  isHeading={isHeading} editId={editId}  Cliconanimal={Cliconanimal} /> 
           :
-          <Container Setsuccess={Setsuccess} SetaddAnimal={SetaddAnimal}  Api_Connect={Api_Connect} Setmessage={Setmessage} SetEditId={SetEditId} Setfailure={Setfailure} SetisHeading={SetisHeading} SetisisProcessing={SetisisProcessing}  Setloadpop={Setloadpop} Loadpop={Loadpop} />
+          <Container Setsuccess={Setsuccess} SetaddAnimal={SetaddAnimal}  Api_Connect={Api_Connect} Setmessage={Setmessage} SetEditId={SetEditId} Setfailure={Setfailure} SetisHeading={SetisHeading} SetisisProcessing={SetisisProcessing}  Setloadpop={Setloadpop} Loadpop={Loadpop} SetClickonanilmal={SetClickonanilmal} />
           }
              
              

@@ -72,7 +72,8 @@ const {SetaddAnimal,  Setloadpop } = created
       let object = {'tagnumber':'', 'id':'', 'editx':''}
       window.localStorage.setItem('tagnumber', JSON.stringify(object))
       SetaddAnimal(false)
-      
+      // let titleans = title == 'animal'?true:false
+      // SetClickonanilmal(titleans)
       Setistitle(title)
       setTimeout(()=>{
       

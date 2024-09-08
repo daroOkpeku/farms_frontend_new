@@ -4,7 +4,7 @@ import cattle from '../../image/cow.png'
 import { MdDelete } from "react-icons/md";
 import { MdModeEditOutline } from "react-icons/md";
 import { useRouter } from 'next/router';
-export default function Production_table({List, SetaddAnimal,  Setcreated_tag,  SetisHeading,  Setmessage,  Setfailure, SetisisProcessing, Setsuccess}) {
+export default function Production_table({List, SetaddAnimal,  Setcreated_tag,  SetisHeading,  Setmessage,  Setfailure, SetisisProcessing, Setsuccess, SetClickonanilmal}) {
   const created = useContext(context)
   const { Api_Connect} = created
     const router = useRouter();
@@ -18,6 +18,7 @@ export default function Production_table({List, SetaddAnimal,  Setcreated_tag,  
        window.localStorage.setItem('tagnumber', JSON.stringify(object))
         SetisHeading('Production Data')
         SetaddAnimal(true)
+        SetClickonanilmal(false)
        setTimeout(()=>{
         router.replace({
             pathname: '/animals',

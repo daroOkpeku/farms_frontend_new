@@ -157,10 +157,10 @@ export default function Feed  ({
     var idx = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
     // let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':''}
     // localStorage.setItem('tagnumber', JSON.stringify(object))
-    if(created_tag && idx && Object.keys(idx).length > 0 && idx.id){
+    if(idx && Object.keys(idx).length > 0 && idx.id && idx.tagnumber){
       let urlz = "feeddetailsget";
       Api_Connect.get("/sanctum/csrf-cookie").then(() => {
-        Api_Connect.get(`/api/${urlz}/?tagnumber=`+created_tag+`&id=${idx.id}`, { headers })
+        Api_Connect.get(`/api/${urlz}/?tagnumber=`+idx.tagnumber+`&id=${idx.id}`, { headers })
           .then((res) => {
              //console.log('jwjhwej',res)
             if (res.data.success) {

@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 export default function Group_table({ Data }) {
 const router = useRouter();
 const created = useContext(context)
-const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success, Setsuccess, Failure, Setfailure, Api_Connect, SetisisProcessing} = created
+const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success, Setsuccess, Failure, Setfailure, Api_Connect, SetisisProcessing, SetClickonanilmal} = created
     
   const handleEdit =(id, uid)=>{
     Setcreated_tag(id)
@@ -18,6 +18,7 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
     // localStorage.setItem('editx', 'isedit')
     let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
     window.localStorage.setItem('tagnumber', JSON.stringify(object))
+    SetClickonanilmal(false)
     SetisHeading('Feed Management')
     SetaddAnimal(true)
    setTimeout(()=>{

@@ -33,8 +33,8 @@ useEffect(()=>{
         "Content-Type": "application/json",
         'Accept': "application/json",
       };
-      if(created_tag && idx && Object.keys(idx).length > 0){
-        let url = `productionsingle/?tagnumber=`+created_tag+`&id=${idx.id}`;
+      if(idx && Object.keys(idx).length > 0 && idx.tagnumber){
+        let url = `productionsingle/?tagnumber=`+idx.tagnumber+`&id=${idx.id}`;
         Api_Connect.get("/sanctum/csrf-cookie").then(() => {
             Api_Connect.get(`/api/${url}`, {headers} )
                 .then((res) => {

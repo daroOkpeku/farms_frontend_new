@@ -68,7 +68,7 @@ export default function Health  ({  Api_Connect, created_tag, Setsuccess, Succes
           let son = { value:item, label:item }
           datalist.push(son)
         })
-        console.log(datalist)
+        // console.log(datalist)
         Setvacationlist(datalist)
 
 
@@ -78,10 +78,10 @@ export default function Health  ({  Api_Connect, created_tag, Setsuccess, Succes
 //  healthlist
 var idxx = window.localStorage.getItem('tagnumber')?JSON.parse(window.localStorage.getItem('tagnumber')):"";
 
-if(created_tag & idxx && Object.keys(idxx).length > 0){
+if(idxx && Object.keys(idxx).length > 0 && idx.tagnumber){
   let urlv = "healthlist";
 Api_Connect.get("/sanctum/csrf-cookie").then(() => {
-  Api_Connect.get(`/api/${urlv}/?tagnumber=`+created_tag+`&id=${idxx.id}`, { headers }).then((res) => {
+  Api_Connect.get(`/api/${urlv}/?tagnumber=`+idx.tagnumber+`&id=${idxx.id}`, { headers }).then((res) => {
    console.log(res.data.success)
    if(res.data.success && Object.keys(res.data.success).length > 0){
     Setisedit(true)
@@ -104,7 +104,7 @@ Api_Connect.get("/sanctum/csrf-cookie").then(() => {
 
 
 
-  },[Api_Connect, created_tag])
+  },[Api_Connect, created_tag, idx.tagnumber])
 
   const minDate = new Date();
   minDate.setFullYear(minDate.getFullYear() - 100);

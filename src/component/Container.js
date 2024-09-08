@@ -4,7 +4,7 @@ import TableData from './More/TableData';
 import ReactPaginate from 'react-paginate';
 
 
-export default function Container({SetaddAnimal, Api_Connect, Setsuccess, Setmessage, SetEditId, Setfailure, SetisHeading, SetisisProcessing, Setloadpop, Loadpop}) {
+export default function Container({SetaddAnimal, Api_Connect, Setsuccess, Setmessage, SetEditId, Setfailure, SetisHeading, SetisisProcessing, Setloadpop, Loadpop, SetClickonanilmal}) {
     
 const [Datax, setDatax] = useState([])
 const [last_Page, setlast_Page] = useState(1)
@@ -80,6 +80,7 @@ const [last_Page, setlast_Page] = useState(1)
     // SetaddAnimal  Setfailure
     const handleAdd=()=>{
         SetaddAnimal(true)
+        SetClickonanilmal(true)
         // Setfailure(true)
     }
 
@@ -96,7 +97,7 @@ const [last_Page, setlast_Page] = useState(1)
 
               <div className='w-full  h-[27rem]  scrollbar overflow-x-scroll overflow-y-scroll mt-3 rounded-md bg-white'>
                      {Datax.length > 0?
-                   <TableData  Setsuccess={Setsuccess}  Datax={Datax} Api_Connect={Api_Connect}  Setmessage={Setmessage} SetaddAnimal={SetaddAnimal} SetEditId={SetEditId} Setfailure={Setfailure}  SetisHeading={SetisHeading}  SetisisProcessing={SetisisProcessing} /> 
+                   <TableData  Setsuccess={Setsuccess}  Datax={Datax} Api_Connect={Api_Connect}  Setmessage={Setmessage} SetaddAnimal={SetaddAnimal} SetEditId={SetEditId} Setfailure={Setfailure}  SetisHeading={SetisHeading}  SetisisProcessing={SetisisProcessing}  SetClickonanilmal={SetClickonanilmal} /> 
                      :
                      <span className='w-full mt-10 flex item-center justify-center text-center capitalize text-base font-bold'>No Data yet</span>
                      }

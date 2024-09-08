@@ -5,7 +5,7 @@ import {useContext , useState, useEffect} from "react"
 import { context } from './context';
 export default function Container_finance() {
   const created = useContext(context)
-  const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop} = created
+  const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop, SetClickonanilmal} = created
 const [List, Setlist] = useState([])
 const [last_Page, setlast_Page] = useState(1)
 
@@ -77,7 +77,7 @@ const [last_Page, setlast_Page] = useState(1)
               <div className='w-full  h-[27rem] scrollbar overflow-x-scroll overflow-y-scroll bg-white mt-3 rounded-md'>
              {List.length >0
              ? 
-               <Finance_table List={List} Api_Connect={Api_Connect}  SetisHeading={SetisHeading}  Setcreated_tag={Setcreated_tag}  SetaddAnimal={SetaddAnimal}  Setmessage={Setmessage} Setsuccess={Setsuccess}  Setfailure={Setfailure} SetisisProcessing={SetisisProcessing}  />
+               <Finance_table List={List} Api_Connect={Api_Connect}  SetisHeading={SetisHeading}  Setcreated_tag={Setcreated_tag}  SetaddAnimal={SetaddAnimal}  Setmessage={Setmessage} Setsuccess={Setsuccess}  Setfailure={Setfailure} SetisisProcessing={SetisisProcessing} SetClickonanilmal={SetClickonanilmal}  />
                 :
                 <span className='w-full mt-10 flex item-center justify-center text-center capitalize text-base font-bold'>No Data yet</span>
               }

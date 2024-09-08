@@ -13,6 +13,7 @@ export default function Provider({children}){
     const [ispdf, Setispdf] = useState(false)
     const [isProcessing, SetisisProcessing] = useState(false)
     const [Loadpop, Setloadpop] = useState(true)
+    const [Cliconanimal, SetClickonanilmal] = useState(false)
       const Api_Connect = axios.create({
       baseURL:'https://api.ranchidpro.com',
       // 'https://api.ranchidpro.com',
@@ -50,7 +51,9 @@ export default function Provider({children}){
             SetisisProcessing:SetisisProcessing,
             isProcessing:isProcessing,
             Loadpop:Loadpop,
-            Setloadpop:Setloadpop
+            Setloadpop:Setloadpop,
+            SetClickonanilmal:SetClickonanilmal,
+            Cliconanimal:Cliconanimal
          }}
         >
         {children}

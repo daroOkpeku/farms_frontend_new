@@ -5,7 +5,7 @@ import Animal_health_table from './Animal_health_table';
 import ReactPaginate from 'react-paginate';
 export default function Animal_health_Container() {
     const created = useContext(context)
-    const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop} = created
+    const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop,  SetClickonanilmal} = created
   
     const [List, Setlist] = useState([])
     const [last_Page, setlast_Page] = useState(1)
@@ -72,7 +72,7 @@ export default function Animal_health_Container() {
         <section className='w-full flex flex-col items-center  '>
         <div className='w-full  h-[27rem] scrollbar overflow-x-scroll overflow-y-scroll bg-white  mt-3 rounded-md'>
           {List.length > 0?
-         <Animal_health_table List={List}  SetaddAnimal={SetaddAnimal}  Setcreated_tag={Setcreated_tag}  SetisHeading={SetisHeading}  Setmessage={Setmessage}  Setfailure={Setfailure}  Api_Connect={Api_Connect} SetisisProcessing={SetisisProcessing} Setsuccess={Setsuccess} />
+         <Animal_health_table List={List}  SetaddAnimal={SetaddAnimal}  Setcreated_tag={Setcreated_tag}  SetisHeading={SetisHeading}  Setmessage={Setmessage}  Setfailure={Setfailure}  Api_Connect={Api_Connect} SetisisProcessing={SetisisProcessing} Setsuccess={Setsuccess}  SetClickonanilmal={SetClickonanilmal} />
           :
           <span className='w-full mt-10 flex item-center justify-center text-center capitalize text-base font-bold'>No Data yet</span>
           }

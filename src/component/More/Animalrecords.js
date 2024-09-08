@@ -12,7 +12,8 @@ export default  function Animalrecords  ({
   created_tag,
   editId, 
   SetaddAnimal,
-  SetisisProcessing
+  SetisisProcessing,
+  SetClickonanilmal
 }) {
   const [select_Sex, Setselect_Sex] = useState(null);
   const [farmList, SetfarmList] = useState([]);
@@ -32,7 +33,7 @@ export default  function Animalrecords  ({
     { value: "Male", label: "Male" },
     { value: "Female", label: "Female" },
   ];
-console.log(Failure)
+// console.log(Failure)
   // url farmnames
   // 'animal_name',
   // 'sex',
@@ -43,7 +44,7 @@ console.log(Failure)
   // 'tag_id',
   // 'health_status',
   // 'farm_farmid'
-   console.log(created_tag)
+  //  console.log(created_tag)
   const option_status = [
     { value: "Permanent", label: "Permanent" },
     { value: "Temporary", label: "Temporary" },
@@ -202,6 +203,7 @@ console.log(Failure)
             if(idx && idx.editx){
               let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':'isedit'}
               window.localStorage.setItem('tagnumber', JSON.stringify(object))
+              SetClickonanilmal(true)
             }else{
               let object = {'tagnumber':res.data.tagnumber, 'id':res.data.id, 'editx':''}
               window.localStorage.setItem('tagnumber', JSON.stringify(object))

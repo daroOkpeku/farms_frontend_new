@@ -4,7 +4,7 @@ import { context } from '../context';
 import ReactPaginate from 'react-paginate';
 import Production_table from './Production_table';
 
-export default function Production_Containter() {
+export default function Production_Containter({ SetClickonanilmal}) {
     const created = useContext(context)
     const { Api_Connect, Setmessage, message, SetisHeading, isHeading, addAnimal, SetaddAnimal,Setcreated_tag, Setsuccess, Setfailure, SetisisProcessing, Setloadpop} = created
 
@@ -75,7 +75,7 @@ export default function Production_Containter() {
         <section className='w-full flex flex-col items-center overflow-y-auto scrollbar'>
         <div className='w-full  h-[27rem] scrollbar overflow-x-scroll overflow-y-scroll bg-white  mt-3 rounded-md'>
           {List.length > 0?
-          <Production_table List={List}  SetaddAnimal={SetaddAnimal}  Setcreated_tag={Setcreated_tag}  SetisHeading={SetisHeading}  Setmessage={Setmessage}  Setfailure={Setfailure} SetisisProcessing={SetisisProcessing} Setsuccess={Setsuccess}  />
+          <Production_table List={List}  SetaddAnimal={SetaddAnimal}  Setcreated_tag={Setcreated_tag}  SetisHeading={SetisHeading}  Setmessage={Setmessage}  Setfailure={Setfailure} SetisisProcessing={SetisisProcessing} Setsuccess={Setsuccess}  SetClickonanilmal={SetClickonanilmal}  />
           :
                 <span className='w-full mt-10 flex item-center justify-center text-center capitalize text-base font-bold'>No Data yet</span>
               }

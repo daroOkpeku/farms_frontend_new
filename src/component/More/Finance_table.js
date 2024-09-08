@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 import { MdModeEditOutline } from "react-icons/md";
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-export default function Finance_table({List, Api_Connect,  SetisHeading,  Setcreated_tag,  SetaddAnimal,  Setmessage, Setsuccess, Setfailure, SetisisProcessing}) {
+export default function Finance_table({List, Api_Connect,  SetisHeading,  Setcreated_tag,  SetaddAnimal,  Setmessage, Setsuccess, Setfailure, SetisisProcessing, SetClickonanilmal}) {
     const router = useRouter();
 
     const data = [
@@ -59,6 +59,7 @@ export default function Finance_table({List, Api_Connect,  SetisHeading,  Setcre
         let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
         window.localStorage.setItem('tagnumber', JSON.stringify(object))
         SetisHeading('Financial Record')
+        SetClickonanilmal(false)
         SetaddAnimal(true)
        setTimeout(()=>{
         router.replace({

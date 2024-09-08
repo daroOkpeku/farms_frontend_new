@@ -4,7 +4,7 @@ import cattle from "../../image/cow.png";
 import { MdModeEditOutline } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { useRouter } from 'next/router';
-export default function TableData({Datax, Api_Connect, Setmessage, Setsuccess, SetaddAnimal, SetEditId, Setfailure, SetisHeading, SetisisProcessing}) {
+export default function TableData({Datax, Api_Connect, Setmessage, Setsuccess, SetaddAnimal, SetEditId, Setfailure, SetisHeading, SetisisProcessing, SetClickonanilmal}) {
 
 
 const router = useRouter();
@@ -16,6 +16,7 @@ const router = useRouter();
     SetisHeading('Animal Records')
     SetEditId(id)
     SetaddAnimal(true)
+    SetClickonanilmal(true)
     let object = {'tagnumber':id, 'id':uid, 'editx':'isedit'}
    window. localStorage.setItem('tagnumber', JSON.stringify(object))
     // localStorage.setItem('id', JSON.stringify(uid))
