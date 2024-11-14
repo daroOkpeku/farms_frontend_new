@@ -97,16 +97,16 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
 
     return (
 
-        <table className='min-w-full'>
+        <table className='w-dvw sm:w-dvw md:w-full lg:w-full  rounded-md'>
         <thead className=''>
            <tr className='w-full  uppercase text-sm leading-normal '>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[14px] md:text-sm lg:text-base text-center whitespace-nowrap'>Animal Type</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[14px] md:text-sm  lg:text-base  text-center whitespace-nowrap'>Tag</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[14px] md:text-sm  lg:text-base text-center whitespace-nowrap'>Health Status</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[14px] md:text-sm  lg:text-base text-center whitespace-nowrap'>feed type</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[14px] md:text-sm  lg:text-base text-center whitespace-nowrap'>Production type</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[14px] md:text-sm  lg:text-base text-center whitespace-nowrap'>ration </th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[14px] md:text-sm  lg:text-base text-center whitespace-nowrap'>action </th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm md:text-sm lg:text-base text-center whitespace-nowrap'>Animal Type</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm md:text-sm  lg:text-base  text-center whitespace-nowrap'>Tag</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm md:text-sm  lg:text-base text-center whitespace-nowrap'>Health Status</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm md:text-sm  lg:text-base text-center whitespace-nowrap'>feed type</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm md:text-sm  lg:text-base text-center whitespace-nowrap'>Production type</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm md:text-sm  lg:text-base text-center whitespace-nowrap'>ration </th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm md:text-sm  lg:text-base text-center whitespace-nowrap'>action </th>
            </tr>
         </thead>
         <tbody >
@@ -120,20 +120,20 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
                   </div>
                   <div className='flex flex-row items-center space-x-1 whitespace-nowrap'>
                
-                  <p className='text-[13px] sm:text-xs md:text-sm lg:text-sm font-semibold'>{item.feed_mgt.name}</p></div> </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[13px] sm:text-xs md:text-sm lg:text-sm whitespace-nowrap'>
+                  <p className='text-xs sm:text-xs md:text-sm lg:text-sm font-semibold'>{item.feed_mgt.name}</p></div> </td>
+                <td className='text-center uppercase font-medium  pt-6 text-xs sm:text-xs md:text-sm lg:text-sm whitespace-nowrap'>
                  {item.feed_mgt.tag_id}
                 </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[13px] sm:text-xs md:text-sm lg:text-sm whitespace-nowrap'>
+                <td className='text-center uppercase font-medium  pt-6 text-xs sm:text-xs md:text-sm lg:text-sm whitespace-nowrap'>
                    {item.feed_mgt.health_status}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[13px] sm:text-xs md:text-sm lg:text-sm   w-20'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs sm:text-xs md:text-sm lg:text-sm   w-20'>
                   {item.feedtype}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[13px] sm:text-xs md:text-sm lg:text-sm whitespace-nowrap px-10 lg:px-16'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs sm:text-xs md:text-sm lg:text-sm whitespace-nowrap px-10 lg:px-16'>
                   {item.producationtype}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[13px] sm:text-xs md:text-sm lg:text-sm whitespace-nowrap w-6 lg:pl-7'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs sm:text-xs md:text-sm lg:text-sm whitespace-nowrap w-6 lg:pl-7'>
                   {item.ration}
                 </td>
                 <td className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2  place-content-center whitespace-nowrap pt-6 py-2 px-8'>

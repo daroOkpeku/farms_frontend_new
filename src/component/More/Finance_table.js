@@ -114,15 +114,15 @@ export default function Finance_table({List, Api_Connect,  SetisHeading,  Setcre
     
   return (
 
-    <table className='min-w-full '>
+    <table className='w-dvw sm:w-dvw md:w-full lg:w-full  rounded-md '>
     <thead className=''>
-       <tr className='w-full  uppercase text-sm leading-normal '>
-       <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap '>Animal type</th>
-       <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm   text-center whitespace-nowrap'>number</th>
-       <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>profit</th>
-       <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap'>expenditure</th>
-       <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap'>yield</th>
-       <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Action</th>
+       <tr className=''>
+       <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap '>Animal type</th>
+       <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm   text-center whitespace-nowrap'>number</th>
+       <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>profit</th>
+       <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap'>expenditure</th>
+       <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap'>yield</th>
+       <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Action</th>
        </tr>
     </thead>
     <tbody>
@@ -131,21 +131,21 @@ export default function Finance_table({List, Api_Connect,  SetisHeading,  Setcre
 
                 return <tr key={index} className='w-full'>
                 <td className='flex flex-row items-center justify-center pt-6' >
-                <div className='w-6 h-6 sm:w-6 sm:h-6 md:w-9 md:h-9 lg:w-9  lg:h-9  rounded-full'>
+                <div className='w-8 h-8 sm:w-6 sm:h-6 md:w-9 md:h-9 lg:w-9  lg:h-9  rounded-full'>
                     <img src={image} alt='img' className='object-cover rounded-full h-full w-full' />
                   </div>
-                  <div className='flex flex-row items-center space-x-1 whitespace-nowrap'><p className='text-[6px] md:textbase lg:text-base font-semibold'>{item.finance_connect?.name}</p></div>
+                  <div className='flex flex-row items-center space-x-1 whitespace-nowrap'><p className='text-xs md:textbase lg:text-base font-semibold'>{item.finance_connect?.name}</p></div>
                    </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap '>
+                <td className='text-center uppercase font-medium  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap '>
                  {item.tagnumber}
                 </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap '>
+                <td className='text-center uppercase font-medium  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap '>
                    {item.profit}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap '>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap '>
                   {item.revenue}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap'>
                   {item.yield}
                 </td>
                 <td className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2  place-content-center whitespace-nowrap pt-6 py-2 '>

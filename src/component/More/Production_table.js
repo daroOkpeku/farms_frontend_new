@@ -83,18 +83,18 @@ export default function Production_table({List, SetaddAnimal,  Setcreated_tag,  
 
 
     return (
-        <div className='min-w-full'>
+        <div className='w-dvw sm:w-dvw md:w-full lg:w-full  rounded-md'>
         <table className=''>
         <thead className='border-b '>
-           <tr className='w-full  uppercase text-sm leading-normal'>
-           <th className='text-[#858D9D]  font-medium  capitalize  text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Production Type</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap'>Tag</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Quantity</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>weight</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Production Cycle</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Estrus Cycle Start date </th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'> Estrus Cycle end date</th>
-           <th className='text-[#858D9D]  font-medium  capitalize text-[8px] sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'> action</th>
+           <tr className=''>
+           <th className='text-[#858D9D]  font-medium  capitalize  text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Production Type</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm  text-center whitespace-nowrap'>Tag</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Quantity</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>weight</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Production Cycle</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'>Estrus Cycle Start date </th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'> Estrus Cycle end date</th>
+           <th className='text-[#858D9D]  font-medium  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm text-center whitespace-nowrap'> action</th>
 
            </tr>
         </thead>
@@ -106,22 +106,22 @@ export default function Production_table({List, SetaddAnimal,  Setcreated_tag,  
                 return <tr key={index} className='flex flex-row items-center justify-center pt-6'>
                 <td className='flex flex-row items-center justify-center pt-6' >
                   <div className='flex flex-row items-center space-x-1 whitespace-nowrap'><p className='text-[6px] md:textbase lg:text-base font-semibold'>{item.production_type}</p></div> </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
+                <td className='text-center uppercase font-medium  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap'>
                  {item.tagnumber}
                 </td>
-                <td className='text-center uppercase font-medium  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
+                <td className='text-center uppercase font-medium  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap'>
                    {item.quantity}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap'>
                   {item.weight}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap'>
                   {item.production_cycle}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap'>
                   {ConvertDate(item.estrus_cycle_start_date)}
                 </td>
-                <td className='text-center uppercase font-semibold  pt-6 text-[6px] md:textbase lg:text-base whitespace-nowrap'>
+                <td className='text-center uppercase font-semibold  pt-6 text-xs md:textbase lg:text-base whitespace-nowrap'>
                   {ConvertDate(item.estrus_cycle_end_date)}
                 </td>
                 <td className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2  place-content-center whitespace-nowrap pt-6 py-2 '>

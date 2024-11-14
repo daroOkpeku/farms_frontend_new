@@ -83,10 +83,10 @@ const [last_Page, setlast_Page] = useState(1)
               }
               </div>
               <div className='w-full mt-1 px-2'>
-                     <article className="w-[40%] border  float-left">
+                     <article className="w-11/12 m-auto sm:w-[50%] sm:m-auto md:w-[40%] lg:w-[40%]   float-left">
                          <ReactPaginate
-                         containerClassName="w-full border flex flex-row items-center  space-x-2"
-                         pageClassName="w-6 w-6 text-xs sm:w-6 sm:w-6 sm:text-xs md:w-8 md:h-8 md:text-sm  lg:w-6 lg:h-6 lg:text-sm grid place-content-center rounded-full bg-[#4C4C4C] text-white hover:bg-blue-500 hover:text-black "
+                         containerClassName="w-full  flex flex-row items-center  space-x-2"
+                         pageClassName="w-8 w-8 text-xs sm:w-6 sm:w-6 sm:text-xs md:w-8 md:h-8 md:text-sm  lg:w-6 lg:h-6 lg:text-sm grid place-content-center rounded-full bg-[#4C4C4C] text-white hover:bg-blue-500 hover:text-black "
                            pageRangeDisplayed={3}
                            pageCount={last_Page}
                            onPageChange={handlePaginate}

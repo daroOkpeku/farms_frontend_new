@@ -141,14 +141,14 @@ const router = useRouter();
 
 
       // <div className="w-full py-2 px-2">
-      <table className="min-w-full">
+      <table className="w-dvw sm:w-dvw md:w-full lg:w-full  rounded-md">
         <thead className="">
           <tr className="">
-            <th className="text-[#858D9D]  capitalize text-[14px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">animal type</th>
-            <th className="text-[#858D9D]  capitalize text-[14px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">unique ID</th>
-            <th className="text-[#858D9D] capitalize text-[14px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">health</th>
-            <th className="text-[#858D9D]  capitalize text-[14px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">sex</th>
-            <th className="text-[#858D9D]  capitalize text-[14px] sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">action</th>
+            <th className="text-[#858D9D]  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">animal type</th>
+            <th className="text-[#858D9D]  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">unique ID</th>
+            <th className="text-[#858D9D] capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">health</th>
+            <th className="text-[#858D9D]  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">sex</th>
+            <th className="text-[#858D9D]  capitalize text-sm sm:text-[9px] md:text-sm lg:text-sm font-medium text-center whitespace-nowrap">action</th>
           </tr>
         </thead>
         <tbody className="w-full mt-2">
@@ -163,16 +163,16 @@ const router = useRouter();
                     <img src={image} alt='img' className='object-cover rounded-full h-full w-full' />
                   </div>
                   <div className="items-center space-x-1 whitespace-nowrap ">
-                    <p className="text-[6px] md:textbase lg:text-base font-semibold">{item.name}</p>
+                    <p className="text-xs md:textbase lg:text-base font-semibold">{item.name}</p>
                   </div>
                 </td>
-                <td className="text-center uppercase font-medium text-[6px] pt-6 md:text-sm lg:text-sm whitespace-nowrap ">
+                <td className="text-center uppercase font-medium text-xs pt-6 md:text-sm lg:text-sm whitespace-nowrap ">
                   {item.tag_id}
                 </td>
-                <td className="text-center uppercase font-medium text-[6px] pt-6 md:text-sm lg:text-sm whitespace-nowrap  px-4">
+                <td className="text-center uppercase font-medium text-xs pt-6 md:text-sm lg:text-sm whitespace-nowrap  px-4">
                   {item.health_status}
                 </td>
-                <td className="text-center uppercase font-semibold text-[6px] pt-6 md:text-sm lg:text-sm whitespace-nowrap px-4">
+                <td className="text-center uppercase font-semibold text-xs pt-6 md:text-sm lg:text-sm whitespace-nowrap px-4">
                   {item.sex}
                 </td>
                 <td className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 place-content-center whitespace-nowrap pt-6 py-2 px-4">
