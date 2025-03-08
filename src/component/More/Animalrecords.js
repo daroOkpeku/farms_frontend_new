@@ -95,6 +95,7 @@ export default  function Animalrecords  ({
     let headers = {
       "Content-Type": "application/json",
       "Accept": "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let url = "farmnames";
     Api_Connect.get("/sanctum/csrf-cookie").then(() => {
@@ -187,6 +188,7 @@ export default  function Animalrecords  ({
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let url = "animaldetails";
     Api_Connect.get("/sanctum/csrf-cookie").then(() => {
@@ -274,6 +276,7 @@ export default  function Animalrecords  ({
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let url = "editanimaldetails";
     Api_Connect.get("/sanctum/csrf-cookie").then(() => {

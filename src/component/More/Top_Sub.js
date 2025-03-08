@@ -12,6 +12,7 @@ export default function Top_Sub({Api_Connect, Setloadpop}) {
       let headers = {
          'Content-Type': 'application/json',
           'Accept': 'application/json',
+          "X-API-KEY": process.env.NEXT_PUBLIC_CODE
      };
      let url = 'totals';
      Api_Connect.get('/sanctum/csrf-cookie').then(() => {

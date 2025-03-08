@@ -88,6 +88,7 @@ export default function Finance_table({List, Api_Connect,  SetisHeading,  Setcre
               headers: {
                   'Content-Type': 'application/json',
                   'Accept': 'application/json',
+                  "X-API-KEY": process.env.NEXT_PUBLIC_CODE
                   // Add other headers if needed, such as Authorization
               }
           } )

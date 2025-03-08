@@ -26,6 +26,7 @@ const [last_page, Setlast_page] = useState(0)
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      'X-API-KEY':  process.env.NEXT_PUBLIC_CODE
     };
     //?page='+Answer
     let url = "feed_mgt?page="+1;

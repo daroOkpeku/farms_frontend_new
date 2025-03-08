@@ -72,7 +72,8 @@ export default function Feed  ({
   useEffect(() => {
     let headers = {
       "Content-Type": "application/json",
-      Accept: "application/json",
+      "Accept": "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     // animalfeeddata
     let url = "animalfeeddata";
@@ -213,6 +214,7 @@ export default function Feed  ({
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
 
  
@@ -313,6 +315,7 @@ export default function Feed  ({
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
 
     let formdata = new FormData();

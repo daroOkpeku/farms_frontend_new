@@ -35,6 +35,7 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
     let headers = {
         'Content-Type': 'application/json',
          'Accept': 'application/json',
+         "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
 
 
@@ -71,6 +72,7 @@ const {Setcreated_tag, SetisHeading, SetaddAnimal,  Setmessage, message, Success
           headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json',
+              "X-API-KEY": process.env.NEXT_PUBLIC_CODE
               // Add other headers if needed, such as Authorization
           }
       } )

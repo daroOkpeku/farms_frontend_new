@@ -37,6 +37,7 @@ export default function Production_table({List, SetaddAnimal,  Setcreated_tag,  
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
+                "X-API-KEY": process.env.NEXT_PUBLIC_CODE
                 // Add other headers if needed, such as Authorization
             }
         } )

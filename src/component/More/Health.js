@@ -57,6 +57,7 @@ export default function Health  ({  Api_Connect, created_tag, Setsuccess, Succes
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let url = "vaccinelist";
     Api_Connect.get("/sanctum/csrf-cookie").then(() => {
@@ -115,6 +116,7 @@ Api_Connect.get("/sanctum/csrf-cookie").then(() => {
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let formdata = new FormData();
     formdata.append("vacation_date", vacation_date);
@@ -215,6 +217,7 @@ Api_Connect.get("/sanctum/csrf-cookie").then(() => {
     let headers = {
       "Content-Type": "application/json",
       'Accept': "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let formdata = new FormData();
     formdata.append("vacation_date", vacation_date);

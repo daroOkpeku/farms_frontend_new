@@ -89,6 +89,7 @@ const handleDelete = (id)=>{
     let headers = {
         'Content-Type': 'application/json',
          'Accept': 'application/json',
+         "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
 
   let formData =  JSON.stringify({
@@ -125,6 +126,7 @@ const handleDelete = (id)=>{
           headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json',
+              "X-API-KEY": process.env.NEXT_PUBLIC_CODE
               // Add other headers if needed, such as Authorization
           }
       } )

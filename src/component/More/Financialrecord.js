@@ -30,6 +30,7 @@ export default function Financialrecord  ({
     let headers = {
         "Content-Type": "application/json",
         'Accept': "application/json",
+        "X-API-KEY": process.env.NEXT_PUBLIC_CODE
       };
       if(created_tag && idx && Object.keys(idx).length > 0){
         let urlv = "financialrecordsingle";
@@ -59,6 +60,7 @@ export default function Financialrecord  ({
     let headers = {
         "Content-Type": "application/json",
         'Accept': "application/json",
+        "X-API-KEY": process.env.NEXT_PUBLIC_CODE
       };
       let formdata = new FormData();
       formdata.append("tagnumber", created_tag);
@@ -159,6 +161,7 @@ export default function Financialrecord  ({
     let headers = {
         "Content-Type": "application/json",
         'Accept': "application/json",
+        "X-API-KEY": process.env.NEXT_PUBLIC_CODE
       };
       let formdata = new FormData();
       formdata.append("tagnumber", created_tag);

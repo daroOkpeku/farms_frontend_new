@@ -10,7 +10,8 @@ import Image from 'next/image';
 useEffect(()=>{
   let headers = {
     "Content-Type": "application/json",
-    Accept: "application/json",
+    "Accept": "application/json",
+    "X-API-KEY": process.env.NEXT_PUBLIC_CODE
   };
   if(created_tag){
   let urlz = "animaldetailsget";
@@ -43,6 +44,7 @@ useEffect(()=>{
     let headers = {
       "Content-Type": "multipart/form-data",
       "Accept": "application/json",
+      "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let url = 'photo'
     let formdata = new FormData();

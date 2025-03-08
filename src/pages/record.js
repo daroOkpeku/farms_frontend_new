@@ -33,6 +33,7 @@ export default function Record() {
         let headers = {
           "Content-Type": "application/json",
           "Accept": "application/json",
+          "X-API-KEY": process.env.NEXT_PUBLIC_CODE
         };
         let urlz = "documentlist";
         Api_Connect.get("/sanctum/csrf-cookie").then(() => {

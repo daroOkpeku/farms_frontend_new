@@ -14,6 +14,7 @@ export default function Container_group({Data,  last_page, SetData,  Setlast_pag
         let headers = {
             'Content-Type': 'application/json',
              'Accept': 'application/json',
+            "X-API-KEY": process.env.NEXT_PUBLIC_CODE
         };
         let url = 'feed_mgt?page='+Answer;
         Api_Connect.get('/sanctum/csrf-cookie').then(() => {

@@ -32,6 +32,7 @@ useEffect(()=>{
     let headers = {
         "Content-Type": "application/json",
         'Accept': "application/json",
+        "X-API-KEY": process.env.NEXT_PUBLIC_CODE
       };
       if(idx && Object.keys(idx).length > 0 && idx.tagnumber){
         let url = `productionsingle/?tagnumber=`+idx.tagnumber+`&id=${idx.id}`;
@@ -71,6 +72,7 @@ const maxDate = new Date();
         let headers = {
             "Content-Type": "application/json",
             'Accept': "application/json",
+            "X-API-KEY": process.env.NEXT_PUBLIC_CODE
           };
         let formdata = new FormData()
         formdata.append('production_type', production_type)
@@ -176,6 +178,7 @@ const maxDate = new Date();
     let headers = {
         "Content-Type": "application/json",
         'Accept': "application/json",
+        "X-API-KEY": process.env.NEXT_PUBLIC_CODE
       };
     let formdata = new FormData()
     formdata.append('production_type', production_type)

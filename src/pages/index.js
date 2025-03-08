@@ -21,6 +21,8 @@ const [isVisible, setIsVisible] = useState(true);
     setSidebarShow(!sidebarShow);
   }
 
+  
+
   return (
    <div className="w-full flex flex-col items-center h-screen fixed overflow-x-scroll scrollbar">
      <Header showing={visibility} isSidebarShowing = {sidebarShow}/>

@@ -34,6 +34,7 @@ const router = useRouter();
               headers: {
                   'Content-Type': 'application/json',
                   'Accept': 'application/json',
+                  "X-API-KEY": process.env.NEXT_PUBLIC_CODE
                   // Add other headers if needed, such as Authorization
               }
           } )

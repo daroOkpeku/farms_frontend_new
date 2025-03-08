@@ -26,6 +26,7 @@ export default function AddRecord({SetaddRecord}) {
     let headers = {
       'Content-Type':"multipart/form-data",
        'Accept': 'application/json',
+       "X-API-KEY":  process.env.NEXT_PUBLIC_CODE
   };
     let url = 'documentupload';
     Api_Connect.get('/sanctum/csrf-cookie').then(() => {

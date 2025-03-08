@@ -37,6 +37,7 @@ function Pie({Api_Connect}) {
     let headers = {
         'Content-Type': 'application/json',
          'Accept': 'application/json',
+         "X-API-KEY": process.env.NEXT_PUBLIC_CODE
     };
     let url = 'gender';
     Api_Connect.get('/sanctum/csrf-cookie').then(() => {

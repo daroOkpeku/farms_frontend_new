@@ -14,6 +14,7 @@ const [last_Page, setlast_Page] = useState(1)
         let headers = {
             'Content-Type': 'application/json',
              'Accept': 'application/json',
+            "X-API-KEY": process.env.NEXT_PUBLIC_CODE
         };
         let url = 'animaldatatable';
         Api_Connect.get('/sanctum/csrf-cookie').then(() => {
@@ -53,6 +54,7 @@ const [last_Page, setlast_Page] = useState(1)
             let headers = {
                 'Content-Type': 'application/json',
                  'Accept': 'application/json',
+                 "X-API-KEY": process.env.NEXT_PUBLIC_CODE
             };
             let url = 'animaldatatable?page='+Answer;
             Api_Connect.get('/sanctum/csrf-cookie').then(() => {
